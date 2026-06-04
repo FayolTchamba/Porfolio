@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <style>
+body {
+    background-color: #0d1117;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Style du formulaire */
+
+.form-control, .form-control:focus {
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #1dd1a1;
+}
+.form-control{
+    background: rgba(255, 255, 255, 0.884);
+}
+
+.form-label {
+    color: #1dd1a1;
+}
+
+.btn-send {
+    background-color: #1dd1a1;
+    border: none;
+}
+
+.btn-send:hover {
+    background: #194239;
+}
+
+.card {
+    border: 1px solid #1dd1a1;
+ } 
+ .perso{
+    height: auto;
+    overflow: visible;
+    padding: 20px;
+ }
+</style>
+</head>
+<body>
+   <header style="background-color: rgb(49, 49, 51);">
+    <nav class="bloc">
+      <div class="soc">
+        <img src="./assets/Images/ft-design.png" alt="Design personnel de Fayol Tchamba">
+      </div>
+      <div class="nav-lists">
+      <ul>
+      <li><a href="index.html">Acceuil</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      </ul>
+      </div>
+      <div class="social">
+        <img src="./assets/Images/github.png" alt="Logo de github">
+      </div>
+    
+      <div class="menu" id="sal">
+            &#9776; 
+      </div>
+    </nav>
+
+  </header>   
+  <br> <br><br><br>
+ 
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="./assets/Images/Ghu.mp4" type="video/mp4">
+  </video>
+  <!-- Font Awesome -->
+
+
+<body>
+
+<div class="container py-5">
+    
+    <h1 class="text-center mb-5"  style="color: #1dd1a1;">Veuillez remplir ce formulaire pour me contacter</h1>
+
+     <div class="row justify-content-center"> 
+        <div class="col-md-8">
+            <div class="card p-4 perso" style="background-color: rgba(255, 255, 255, 0.1);">
+                <!-- clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  -->
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="yamoto@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sujet" class="form-label">Objet</label>
+                        <input type="text" class="form-control" id="sujet" placeholder="Objet" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-send w-10">Envoyer <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message de confirmation simulé -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div id="confirmationMessage" class="alert alert-success text-center d-none">
+                Merci ! Votre message a été envoyé.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Simulation de l'envoi du formulaire
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche l'envoi réel
+    document.getElementById('confirmationMessage').classList.remove('d-none');
+    // Réinitialisation du formulaire
+    this.reset();
+});
+</script>
+<script src ="assets/script/index.js" ></script>
+</body>
+</html>

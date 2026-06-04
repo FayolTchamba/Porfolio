@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+<body>
+  <header style="background-color: rgb(49, 49, 51);">
+    <nav class="bloc">
+      <div class="soc">
+        <img src="./assets/Images/ft-design.png" alt="Design personnel de Fayol Tchamba">
+      </div>
+      <div class="nav-lists">
+      <ul>
+      <li><a href="index.html">Acceuil</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      </ul>
+      </div>
+      <div class="social">
+        <img src="./assets/Images/github.png" alt="Logo de github">
+      </div>
+    
+      <div class="menu" id="sal">
+            &#9776; 
+      </div>
+    </nav>
+
+  </header>     
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <style>
+
+body {
+  background-image: url(./assets/Images/b);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1f1e1e;
+  color: #e1e1eb;
+}
+
+/* Galerie */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.gallery-item {
+  background-color: rgb(5, 4, 27);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s;
+}
+
+.desc {
+  text-align: center;
+  padding: 10px;
+  color: var(--bleu);
+  font-weight: bold;
+}
+
+/* Effet de rotation (classe ajoutée via JS) */
+.rotate {
+  animation: spin 0.6s linear;
+}
+@keyframes spin {
+  form{transform: rotateY(0deg);}
+  to{transform: rotateY(360deg);}
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+
+  /* Ajout pour que la rotation 3D fonctionne */
+  perspective: 1000px;
+}
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s;
+}
+.gallery-item img:hover{
+  transform: scale(1.5); /* zoom léger*/
+  transition : transform 0.3s ease;
+}
+
+.gallery-item img.rotate {
+  transform: rotate(360deg);
+}
+
+  </style>
+
+  <br>
+
+  <main class="gallery-container">
+    <div class="gallery-item">
+      <img src="./assets/Images/a" alt="Description 1">
+      <p class="desc">Actuellement dans les locaux du NRC pour un séminaire édifiant dans le domaine de l'entrepreneuriat
+         <h6 style="margin-left: 100px; color: #1dd1a1;">Mai 2024</h6>
+      </p>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/e" alt="Description 2">
+      <p class="desc">Petite pause dans un univers prestigieux, le regard tourné vers l'avenir</p>
+       <h6 style="margin-left: 100px; color: #1dd1a1;">Mai 2024</h6>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/f" alt="Description 3">
+      <p class="desc">Dans un restaurant de la place, prêt à déguster la célèbre marque de plantains-chip <span style="color: #1dd1a1;">"Ndjoka"</span> </p>
+       <h6 style="margin-left: 100px; color: #1dd1a1;">Mai 2024</h6>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/g" alt="Description 4">
+      <p class="desc">À la rencontre du Dr Claudel Noubissie à Yaoundé au Cameroun</p>
+      <h6 style="margin-left: 100px; color: #1dd1a1;">Mai 2024</h6>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/ba" alt="Description 5">
+      <p class="desc">Préparation pour le mariage d'un proche en <span style="color: #1dd1a1;">Mars 2025</span></p>
+
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/c" alt="Description 6">
+      <p class="desc">Photo prise pendant la période de la formation en developpement devant le club Informatiquede l'université de Yaoundé I</p>
+      <h6 style="margin-left: 110px; color: #1dd1a1;">Août 2025</h6>
+
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/Images/d" alt="Description 7">
+      <p class="desc">Photo prise pendant la période de la formation en developpement devant le club Informatiquede l'université de Yaoundé I</p>
+      <h6 style="margin-left: 110px; color: #1dd1a1;">Août 2025</h6>
+    </div>
+  </main>
+
+<script src ="assets/script/index.js" ></script>
+</body>
+
+</html>
