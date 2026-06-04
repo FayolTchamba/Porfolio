@@ -81,9 +81,10 @@ header {
 header nav a {
     color: #fff;
     text-decoration: none;   /*pour ne pas souligner les liens automatiquement*/
-    transition: 0.3s; /* Pour que les liens changent de couleur en 0.3 seconde quand on met le curseur dessus */
+    transition: 0.06s; /* Pour que les liens changent de couleur en 0.3 seconde quand on met le curseur dessus */
     font-size: 25px;
     margin-top: 2%;
+    display: inline-block;
 }
 
 header nav a:hover {
@@ -275,7 +276,7 @@ footer a:hover {
         text-align: center;
     } 
     .bloc .nav-lists ul li a:hover {
-    color: #1dd1a1 !important;
+        color: #1dd1a1 !important;
     }
     
     header nav a:hover {
@@ -370,5 +371,4 @@ footer a:hover {
         background: #1dd1a1;
         margin-right: 50px;
     }
-    
 }
